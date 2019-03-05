@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import Tabs from './Tabs'
 class App extends Component {
   render() {
     return (
@@ -19,6 +19,17 @@ class App extends Component {
           >
             Learn React
           </a>
+          <Tabs tabsId = "First-Tab-Example" >
+            <div tabId = "Tab-1" label = "Tab 1" >
+            tab content 1
+            </div>
+            <div tabId = "Tab2" label = "Tab 2" >
+            tab content 2
+            </div>
+            <div tabId = "Tab3" label = "Tab 3 with title bigger" >
+            tab content 3
+            </div>
+          </Tabs>
         </header>
       </div>
     );

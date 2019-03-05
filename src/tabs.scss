@@ -1,0 +1,47 @@
+@import "./_colors";
+
+.tab-list {
+	padding-left: 0;
+	margin-bottom: 10px;
+}
+
+.tab-list-item {
+	display: inline-block;
+	list-style: none;
+	margin-bottom: 30px;
+	padding: 2px 6px;
+	margin-right: 22px;
+	border-width: 1px 1px 1px 1px;
+	border-radius: 5px;
+	border: solid $color-white;
+	color: $color-grey;
+
+	&:not(.tab-list-active):hover {
+		background-color: $color-grey;
+		border: solid $color-grey;
+		color: $color-white;
+		cursor: pointer;
+	}
+}
+
+.tab-list-active {
+	background-color: $color-blue;
+	border: solid $color-blue;
+	color: $color-white;
+}
+
+.tab-item-text {
+	font-size: 1rem;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.tab-content {
+	background: $color-white;
+	color: $color-grey;
+}
+
+html.can-touch .tab-list-item:hover {
+	background-color: $color-blue;
+	border: solid $color-blue;
+	color: $color-white;
+}

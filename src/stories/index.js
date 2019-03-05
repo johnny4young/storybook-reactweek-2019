@@ -6,6 +6,9 @@ import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
 
+//agregamos el componente que deseamo agregarle la historia
+import Tabs from '../Tabs';
+
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
 storiesOf('Button', module)
@@ -17,3 +20,29 @@ storiesOf('Button', module)
       </span>
     </Button>
   ));
+storiesOf('Tabs', module)
+  .add('two tabs', () => { return (
+    <Tabs tabsId = "First-Tab-Example" >
+      <div tabId = "Tab-1" label = "Tab 1" >
+      tab content 1
+      </div>
+      <div tabId = "Tab2" label = "Tab 2" >
+        tab content 2
+      </div>
+    </Tabs>
+  )})
+  .add('three tabs', () => {
+    return (
+      <Tabs tabsId = "First-Tab-Example" >
+        <div tabId = "Tab-1" label = "Tab 1" >
+          tab content 1
+        </div>
+        <div tabId = "Tab2" label = "Tab 2" >
+          tab content 2
+        </div>
+        <div tabId = "Tab3" label = "Tab 3 with title bigger" >
+          tab content 3
+        </div>
+      </Tabs>
+    )
+  });
